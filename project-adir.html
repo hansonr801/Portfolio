@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Robert Hanson - VM Network & Active Directory Lab</title>
+		<title>Robert Hanson - Company Aquisition - Merge of multiple datasets </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -12,7 +12,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<a href="index.html" class="title">VM Network & Active Directory Lab</a>
+				<a href="index.html" class="title">Company Aquisition - Merge of multiple datasets</a>
 				<nav>
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -28,15 +28,14 @@
 						<div class="inner">
 							<h1 class="major">Virtual Network & Active Directory Lab</h1>
 							<span class="image fit"><img src="images/VMConcept.png" alt="Oops, something went wrong!" height="600" width="600" /></span>
-							<p>Created a virtual network using Oracle VirtualBox, Windows client and server in order to be familiarized with Active Directory, in-depth hands-on networking and be able to utilize this network for defense and pintesting. </p>
-							<p>I started by creating the virtual network using Oracle VirtualBox with a Windows 10 ISO, Server 2019 ISO being two VMs and 1k fictional users. I then set up a VM as the Domain Controller (Server 2019) with 2 network adapters external internet and internal network. Additionally assigned Internal IP Addressing, configure NAT/Routing and setup DHCP & Active Directory. I used PowerShell to create over 1k fictional users for AD. Then using another VM created a client with Windows 10 connecting it with one network adapter connected to the internal network.</p>
-								<li>Oracle VirtualBox / Virtual Machine Setup </li> 
-								<li>Windows and Server ISO Setup </li>
-								<li>Internal and External Networking </li>
-								<li>Domain and Active Directory</li>
-								<li>RAS/NAT Routing </li>
-								<li>DHCP Server, Scope and IP Addressing</li>
-															
+							<p>Data Analysis of a multitude of datasets for a large company aquisition with over 10,000 employees, thousands of products/inventory and hundreds of business units of which all to consider during the acquisition. I was tasked with provising analytics to both upper managment/stakeholders and technical leaders on strategic ways to improve both businesses.</p>
+								
+								<li>Cost Structure Analysis </li> 
+								<li>Patient Volume </li>
+								<li>Staff Productivity </li>
+								<li>HR & Organizational Structure</li>
+								<li>Growth Forecasting </li>
+																							
 								<br/>
 								<details>
 									<summary>
@@ -44,8 +43,43 @@
 									  <span> </span> </span>
 									</summary>
 									<br>
-									<p>I started with setting up a virtual machine through Oracle VirtualBox. This first machine acted as my main Domain Controller, DHCP Server, Active Directory and a Gateway for the internal network and any other machines. The Domain Controller loaded with Windows 2019 Server was setup with 2 NIC, one External and one Internal network. Assigned IP & Subnets, DNS Server. I then setup Active Directory utilzing a roote "mytestdomain." Created new OU in AD for dedicated Admin Login and created a Admin profile under this new OU. Additionally added a "User" OU for users to be loaded into later. Installed RAS/NAT to allow future Client to access internet through DC. Setup DHCP Server on DC to allow the client to obtain an IP address to access internet; during this also setup DHCP scope. I then utilized a simple PowerShell script to add ~1000 randomly generated users under the Users OU with some normalized configurations (first initial/lastname for username, default password (initially) etc). I then created a second VM, utilizing this as the 'Client' aka User. I loaded this profile with Windows 10 Pro ISO, setup only 1 NIC (Internal) to be gated through the DC for internet connections. After setting up the second machine, I double checked the IP/Gateway IPs to confirm the connections were valid. I used command line to confirm I was able to ping Google. I then switched back to the DC VM where I was able to confirm the Client machine was now connected through AD Computers as well as through DHCP>Address Leases were showing for the client IP. In the future I plan to utilize this VM network for testing, defense hardning and further exploration.</p>
+									<p>   </p>
 									<br>
+									<p>Images and files to come, attempting to mask private and proprietary data or recreate with fictional data for expanded use.</p>
+									<p>
+<li>
+1. Cost Structure Analysis <br>
+Role: Identify and compare fixed and variable costs across both companies. <br>
+Tasks: Analyze operational expenses, procurement data, and vendor contracts to spot redundancies or inefficiencies. <br>
+Goal: Highlight opportunities for cost savings and synergies post-merger (e.g., consolidating software licenses or facilities). <br>
+</li>
+<li>									
+2. Patient Volume
+Role: Evaluate historical patient volume trends and forecasting future demand. <br>
+Tasks: Merge patient intake and service utilization data from both entities to assess overlap, peak periods, and underserved areas. <br>
+Goal: Inform decisions on resource allocation and service line optimization. <br>
+</li>
+<li>									
+3. Staff Productivity
+Role: Analyze productivity metrics across teams and departments. <br>
+Tasks: Use KPIs like patients per provider, tasks per hour, or billing per staff member to benchmark performance. <br>
+Goal: Identify high-performing teams, underutilized staff, and potential for workforce rebalancing or training needs. <br>
+</li>
+<li>									
+4. HR & Organizational Structure
+Role: Provide data-driven insights into workforce composition and roles. <br>
+Tasks: Map organizational hierarchies, assess compensation structures, and analyze turnover and tenure. <br>
+Goal: Aid in developing a unified org structure, reducing redundancies, and ensuring role clarity. <br>
+</li>
+<li>									
+5. Growth Forecasting Analytics
+Role: Project future financial and operational performance under the merged entity. <br>
+Tasks: Build predictive models using historical trends, market data, and macroeconomic indicators. <br>
+Goal: Support strategic planning, investment decisions, and scenario modeling for growth opportunities. <br>
+<br>
+Overall Contribution:
+The data analyst ensures the merger is grounded in factual, quantitative insights by integrating data systems, standardizing metrics, and delivering clear visualizations and reports to stakeholders. Their work supports informed decisions, risk mitigation, and value creation in the post-merger integration process.
+									</p>
 									<img src="images/ADProject/WindowsSetup.png" width="600"> 
 									<img src="images/ADProject/IPAddressing.png" width="600"> 
 									<img src="images/ADProject/WindowsServerManager.png" width="600"> 
